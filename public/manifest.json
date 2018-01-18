@@ -1,0 +1,19 @@
+{
+  "short_name": "React App",
+  "name": "React Extension",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "React App Popup"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/*", "http://www.google.com/*"],
+      "js": ["/google.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "static/media/*"
+  ],
+  "version": "1.0"
+}

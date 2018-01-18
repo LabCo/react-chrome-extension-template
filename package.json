@@ -1,0 +1,79 @@
+{
+  "name": "lab-react-chrome-extension",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.0.0-beta.38",
+    "@babel/preset-env": "^7.0.0-beta.38",
+    "babel-eslint": "^8.2.1",
+    "babel-loader": "^8.0.0-beta.0",
+    "babel-preset-react-app": "^4.0.0-next.9754a231",
+    "case-sensitive-paths-webpack-plugin": "^2.1.1",
+    "chalk": "^2.3.0",
+    "css-loader": "^0.28.9",
+    "dotenv": "^4.0.0",
+    "dotenv-expand": "^4.0.1",
+    "eslint": "^4.15.0",
+    "eslint-config-react-app": "^3.0.0-next.9754a231",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-flowtype": "^2.41.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.5.1",
+    "file-loader": "^1.1.6",
+    "html-webpack-plugin": "^2.30.1",
+    "react-chrome-redux": "^1.5.1",
+    "react-dev-utils": "^5.0.0",
+    "style-loader": "^0.19.1",
+    "text-table": "^0.2.0",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0"
+  },
+  "scripts": {
+    "webpack": "NODE_ENV=development webpack --config webpack.dev.js",
+    "start": "NODE_ENV=development webpack --config webpack.dev.js --watch",
+    "build": "NODE_ENV=production webpack --config webpack.prod.js"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,mjs}"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/polyfills.js"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
+      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
+    ],
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
+    ],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web"
+    },
+    "moduleFileExtensions": [
+      "web.js",
+      "mjs",
+      "js",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.3.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}
